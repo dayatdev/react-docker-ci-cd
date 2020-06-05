@@ -33,7 +33,8 @@ workflows:
       - run_tests
       - docker/publish:
           image: oppadayat/$CIRCLE_PROJECT_REPONAME
-          dockerfile: dockerfile
+          dockerfile: Dockerfile
+          path: ./
           requires:
             - run_tests
           filters:
